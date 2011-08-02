@@ -164,20 +164,69 @@ $(function() {
 		
 		// launch the apple overlay style
 		$('#photo-feed img[rel]').overlay({ closeOnClick: 'true', closeOnEsc: 'true' });
+
+
 		
 	}
-	
 		
 	// audio playing for navigations
 	var audio = $('audio')[0];
 	
-	$(".apple").mouseenter(function() {
-		audio.play();
-	});
+	$(".apple").mouseenter(function() { audio.play(); });
 	
 	// sign in script (attach the sign in button)
-	document.getElementById('signin-button').onclick = function() {
-		document.getElementById('signin').submit();
-		return false;
-	}
+	$('#signin-button').click(
+		function() {
+			$('#signin').submit();
+		}
+	
+	);
+
+	// create_new_post.php form action script
+	// there are 3 options at the end of create_new_post.php, either preview or post
+	$('#submit-preview').click(
+		function() {			
+			$('#new-post').attr('action', 'preview_new_post.php').submit();
+		}
+	);
+	
+	$('#submit-post').click(
+		function() {
+			if (confirm("Are you sure you want to publish this entry?")) {
+				$('#new-post').attr('action', 'publish_new_post.php').submit();
+			}
+		}
+	);
+	
+	
+	// clear form script from:
+	// http://www.learningjquery.com/2007/08/clearing-form-data
+	$.fn.clearform = function() {
+		return this.each(
+			function() {
+				$(':input', this).each(
+					function() {
+						var type = this.type, tag = this.tagName.toLowerCase();
+						if (tag == 'form')
+							return $(':input', this).clearform();
+						if (type == 'text' || type == 'password' || tag == 'textarea')
+							this.value = "";
+						else if (type == 'checkbox' || type == 'radio')
+							this.checked = false;
+						else if (tag == 'select')
+							this.selectedIndex = -1;
+					}
+				);
+			}
+		);	
+	};
+	
+	$('#reset-post').click(
+		function() {
+			if (confirm("Are you sure you want to clear all fields?")) {
+				$('#new-post').clearform();
+			}
+		}
+	);	
+	
 });
