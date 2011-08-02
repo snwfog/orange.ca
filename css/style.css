@@ -42,6 +42,8 @@ div#footer-foreground {
 	z-index: 5;
 }
 
+
+
 #container {
 	background: rgba(242, 242, 242, 1.0000);
 	clear: auto;
@@ -66,6 +68,14 @@ div#footer-foreground {
 		7px 7px rgba(95, 124, 60, 1.0000),
 		8px 8px 10px rgba(0, 0, 0, 0.31);
 	z-index: 1;
+}
+
+#header div#session-notify {
+	font-family: Long John Formal Regular, Helvetica, sans-serif;
+	font-size: 1em;
+	color: rgba(255, 255, 255, 1);
+	float: right;
+	margin-right: 10px;
 }
 
 #header #ribbon {
@@ -428,11 +438,11 @@ top: 240px;
 
 #footer-footer p {
 	margin: 5px auto 0px;
-	text-align: center;
 	font-family: Long John Formal Regular, Helvetica, sans-serif;
 	font-size: 0.8em;
 	color: rgba(255, 255, 255, 1);
 	text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+	text-align: center;
 	margin: 0px;
 }
 
@@ -584,7 +594,6 @@ top: 240px;
 	
 }*/
 
-
 #content #left div#end_post {
 	border-top: 1px dotted rgba(255, 255, 255, 0.00);
 	margin: 30px auto 75px;
@@ -626,6 +635,12 @@ top: 240px;
 	border-bottom: dotted 1px rgba(255, 255, 255, 1);
 }
 
+#content #left h1 {
+	color: rgba(198, 193, 166, 1.0000);
+	font-size: 1.70em;
+	text-shadow: 1px 1px rgba(48, 46, 33, 0.9000);
+}
+
 #content #left p {
 	color: rgba(198, 193, 166, 1.0000);
 	font-size: 1.20em;
@@ -634,6 +649,76 @@ top: 240px;
 	clear: both;
 	font-family: Calibri;
 }
+
+/* beginning of sign in form style */
+
+#content #left p a, #content #left p a:visited {
+	color: rgba(254, 132, 0, 1);
+	text-decoration: none;
+	border-bottom: 1px dashed rgba(254, 132, 0, 1);
+}
+
+#content #left p a:hover {
+	color: rgba(255, 255, 255, 1);
+	border-bottom: 1px dashed rgba(255, 255, 255, 1);
+}
+
+#content #left form input {
+	margin-right: -2px;
+	height: 17px;
+	width: 150px;
+	border: none;
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow: 0px -1px rgba(221, 221, 221, 1);
+	font-family: Calibri;
+	font-size: 0.8em;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: rgba(0, 0, 0, 0.8);
+	background: 
+		-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(221, 221, 221, 0.85)), color-stop(10%, rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 1)));
+	
+}
+
+#content #left form input:focus {
+	background: 
+		-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(221, 221, 221, 0.85)), color-stop(10%, rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 1)));
+	outline: none;
+	-webkit-box-shadow: 0px -1px rgba(221, 221, 221, 1);
+	color: rgba(0, 0, 0, 0.65);
+}
+
+#content #left form a#signin-button {
+	text-decoration: none;
+	font-family: Long John Formal Regular, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	border: 1px solid rgba(230, 151, 27, 1);
+	color: rgba(255, 255, 255, 1.0000);
+	background: rgba(251, 161, 49, 1.0000);
+	background-image:
+		-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.6)), color-stop(3%, rgba(253, 181, 59, 1)), to(rgba(252, 137, 41, 1))); /* Inner highlight shadowgradient */
+
+	padding: 3px 20px 3px 20px;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+	text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+#content #left form a#signin-button:hover {
+ 	border: 1px solid rgba(232, 162, 30, 1);
+	background-image:
+			-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.6)), color-stop(3%, rgba(251, 185, 58, 1)), to(rgba(253, 150, 46, 1))); /* Inner highlight shadowgradient */
+}
+
+#content #left form a#signin-button:active {
+	border: 1px solid rgba(205, 147, 48, 1);
+	-webkit-box-shadow: 0px 1px rgba(255, 255, 255, 0.3);
+	background-image:
+			-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(236, 179, 83, 0.5)), color-stop(30%, rgba(251, 185, 58, 1)), to(rgba(253, 150, 46, 1))); /* Inner highlight shadowgradient */
+}
+
+/* end of sign in form style */
 
 #content #left #quotes {
 	width: 480px;

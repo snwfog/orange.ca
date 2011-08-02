@@ -3,7 +3,7 @@ $(function() {
 	
 	// pre-determine the top position of the flower garden, will be placed
 	// at the correct location once window is finished loading
-	var documentHeight = 1400;
+	var documentHeight = 1000;
 	
 	$("#garden-01").css({
 		'top': documentHeight-160 + 'px'
@@ -175,4 +175,9 @@ $(function() {
 		audio.play();
 	});
 	
+	// sign in script (attach the sign in button)
+	document.getElementById('signin-button').onclick = function() {
+		document.getElementById('signin').submit();
+		return false;
+	}
 });
